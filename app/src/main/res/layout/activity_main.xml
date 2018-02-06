@@ -369,7 +369,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="8dp">
+                android:paddingLeft="8dp"
+                android:paddingBottom="16dp"
+                >
 
                 <RadioButton
                     android:id="@+id/q7a1"
@@ -419,14 +421,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="result"
-                android:padding="8dp"
+               android:layout_marginLeft="8dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/rounded_button"
                 android:text="@string/submitButton" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="clear"
-                android:padding="8dp"
+                android:layout_marginLeft="64dp"
+                android:background="@drawable/rounded_button"
                 android:text="@string/restartButton" />
 
 

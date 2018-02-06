@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         q7a4Button = findViewById(R.id.q7a4);
         q3RightName = findViewById(R.id.q3Answer);
 
-        /**
+        /*
          * if the screen is rotated, the score gets its value from the stored value. I used a log to check the stored score value
          */
 
@@ -122,8 +122,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
+    /*
      * Question 1. It's a radio button choice, only 1 answer can be accepted.
+     * If the sorrect answer is checked, the score will be increased by 1 point
      */
 
     public void q1RadioButtonClicked(View view) {
@@ -150,6 +151,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
+         * Question 2. It's a radio button choice, only 1 answer can be accepted.
+         * If the sorrect answer is checked, the score will be increased by 1 point
+         */
 
     public void q2RadioButtonClicked(View view) {
 
@@ -174,6 +179,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    /*
+     * Question 3. It's an editText question.
+     * the answer will be reviewed and scored by the result method.
+     */
+
+
+    /*
+     * Question 4. It's a checkbox choice,
+     * 2 answers can be accepted.
+     * If the sorrect answers are checked, and the bad ones are not, then the score will be increased by 1 point
+     */
 
     public void checkBoxQ4(View view) {
 
@@ -195,6 +211,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+        /*
+         * Question 5. It's a checkbox choice,
+         * 2 answers can be accepted.
+         * If the sorrect answers are checked, and the bad ones are not, then the score will be increased by 1 point
+         */
     public void checkBoxQ5(View view) {
 
         CheckBox q5A1CheckBox = findViewById(R.id.q5A1);
@@ -215,6 +236,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+        /*
+         * Question 6. It's a radio button choice, only 1 answer can be accepted.
+         * If the sorrect answer is checked, the score will be increased by 1 point
+         */
     public void q6RadioButtonClicked(View view) {
 
         boolean checked = ((RadioButton) view).isChecked();
@@ -239,6 +264,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    /*
+     * Question 7. It's a radio button choice, only 1 answer can be accepted.
+     * If the sorrect answer is checked, the score will be increased by 1 point
+     */
 
     public void q7RadioButtonClicked(View view) {
 
@@ -265,7 +295,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
+     * result
+     * @inactivateUI: all the radiobuttons, checkbox and edittext will be inactivated
+     * the score will be presented in a toast message
+     */
+
     public void result(View view) {
+        /*
+         * here can be the result of EditText reviewed.
+         */
 
         EditText q3RightName = findViewById(R.id.q3Answer);
         Editable nameOk = q3RightName.getText();
@@ -285,6 +324,11 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Congratulation! Your score is " + score, Toast.LENGTH_LONG).show();
         }
     }
+
+    /*
+     * if the submit button is called, then this method will inacitvate all the radiobuttons and checkboxes
+     * Thus the result can not be modified.
+     */
 
     private void inactivateUI(boolean enabled) {
         q1a1Button.setEnabled(enabled);
@@ -312,6 +356,12 @@ public class MainActivity extends AppCompatActivity {
         q7a3Button.setEnabled(enabled);
         q7a4Button.setEnabled(enabled);
     }
+
+    /*
+     * clear method: by submitting the clear button, the quiz can be started again by calling (@inactivateUI).
+     * the score will be set back to zero, all the buttons will be active again,
+     * the edit text will be clear
+     */
 
     public void clear(View view) {
 
