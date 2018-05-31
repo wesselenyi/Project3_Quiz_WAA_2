@@ -152,9 +152,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-         * Question 2. It's a radio button choice, only 1 answer can be accepted.
-         * If the sorrect answer is checked, the score will be increased by 1 point
-         */
+     * Question 2. It's a radio button choice, only 1 answer can be accepted.
+     * If the sorrect answer is checked, the score will be increased by 1 point
+     */
 
     public void q2RadioButtonClicked(View view) {
 
@@ -211,11 +211,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-        /*
-         * Question 5. It's a checkbox choice,
-         * 2 answers can be accepted.
-         * If the sorrect answers are checked, and the bad ones are not, then the score will be increased by 1 point
-         */
+    /*
+     * Question 5. It's a checkbox choice,
+     * 2 answers can be accepted.
+     * If the sorrect answers are checked, and the bad ones are not, then the score will be increased by 1 point
+     */
     public void checkBoxQ5(View view) {
 
         CheckBox q5A1CheckBox = findViewById(R.id.q5A1);
@@ -236,10 +236,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-        /*
-         * Question 6. It's a radio button choice, only 1 answer can be accepted.
-         * If the sorrect answer is checked, the score will be increased by 1 point
-         */
+    /*
+     * Question 6. It's a radio button choice, only 1 answer can be accepted.
+     * If the sorrect answer is checked, the score will be increased by 1 point
+     */
     public void q6RadioButtonClicked(View view) {
 
         boolean checked = ((RadioButton) view).isChecked();
